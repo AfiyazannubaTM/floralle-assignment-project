@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Alana-Smooth';
+    src: url('Alana-Smooth.ttf') format('opentype'),
+    url('Alana-Smooth.ttf') format('ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hanken-Font-Light';
+    src: url('HKGrotesk-Light.otf') format('opentype'),
+    url('HKGrotesk-Light.otf') format('otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hanken-Font-Regular';
+    src: url('HKGrotesk-Regular.otf') format('opentype'),
+    url('HKGrotesk-Regular.otf') format('otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hanken-Font-Medium';
+    src: url('HKGrotesk-Medium.otf') format('opentype'),
+    url('HKGrotesk-Medium.otf') format('otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+

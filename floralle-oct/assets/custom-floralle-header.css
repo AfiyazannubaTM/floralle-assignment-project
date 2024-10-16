@@ -1,0 +1,25 @@
+sticky-header.header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+    border-bottom: none !important;
+}
+
+@media (min-width: 990px) {
+    .header-wrapper header.header {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        padding-top: 0px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .header--has-menu:not(.header--middle-left) {
+        padding-bottom: 0;
+    }
+}
+
+.page-width {
+    max-width: 1500px;
+    padding-left: 5%;
+    padding-right: 5%;
+}

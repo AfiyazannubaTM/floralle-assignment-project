@@ -1,0 +1,106 @@
+<div class="customblock">
+  <div class="custom-main-block">
+    <div class="main-image">
+      <img
+        src="{{ section.settings.main-image | image_url }}"
+        width="{{ section.settings.image_width }}px"
+        height="{{ section.settings.image_height }}px"
+        alt="Main Banner Image"
+      >
+    </div>
+    <div class="text-content">
+      <h2>Create An Atmosphere</h2>
+      <div class="text-info">
+        <p>
+          Exquisite floral arrangements crafted using bespoke designs to conjure up the perfect ambience. Anytime.
+          Anywhere.
+        </p>
+      </div>
+      <a href="{{ section.settings.product_image_url }}" class="button-primary">View Catalogue</a>
+    </div>
+  </div>
+</div>
+
+{% style %}
+
+  .customblock {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(90deg, #ffffff 30%, #ffe9dd 25%);
+    background-size: cover;
+    background-position: center center;
+    margin: 20px 0;
+  }
+
+  .customblock .custom-main-block {
+    display: grid;
+    grid-template-columns: 35% 75%;
+    align-items: center;
+  }
+
+  .customblock .custom-main-block .text-content h2{
+    font-size: 48px;
+    text-transform: uppercase;
+    font-family: 'Cormorant', serif;
+}
+
+.customblock .custom-main-block .text-content p{
+    max-width: 500px;
+}
+
+.customblock .custom-main-block .button-primary{
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid;
+    padding: 10px 20px;
+    color: #000000
+}
+
+
+
+{% endstyle %}
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Custom Section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Main Image Width (px)",
+      "default": 460,
+      "min": 100,
+      "max": 500,
+      "step": 10
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Main Image Height (px)",
+      "default": 360,
+      "min": 100,
+      "max": 500,
+      "step": 10
+    },
+    {
+      "type": "image_picker",
+      "id": "main-image",
+      "label": "Main Image"
+    },
+    {
+      "type": "url",
+      "id": "product_image_url",
+      "label": "Product Image URL"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Default Custom Section"
+    }
+  ]
+}
+{% endschema %}

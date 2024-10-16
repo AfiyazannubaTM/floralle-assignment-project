@@ -1,0 +1,105 @@
+<div class="exclusive-collection-block">
+  <div class="main-collection-block">
+    <div class="collection-block">
+      <h1 class="main-heading">THE EXCLUSIVE COLLECTION</h1>
+      <div class="text-info-section">
+        <p class="text-info">
+          Spruce up your home or workplace and turn ordinary days into memorable ones with subscriptions. Whether it's
+          lighting up a room or never missing that special date, consider your steady supply of delight, delivered.
+        </p>
+       
+      </div>
+      <a href="" class="button-primary">Subscribe Now</a>
+
+    </div>
+  </div>
+</div>
+
+{% style %}
+/* .exclusive-collection-block {
+    background: #FFE9DD;
+} */
+
+.exclusive-collection-block .main-collection-block{
+    padding: 75px 0;
+    padding-top: 40px;
+    background-image: url('{{ settings.flower-image | image_url }}');
+}
+
+.exclusive-collection-block .main-collection-block .collection-block{
+    margin: 0 auto;
+    position: relative;
+    width: calc(100% - 15rem);
+    padding: 0px 5%;
+    text-align: center;
+}
+
+.exclusive-collection-block .main-collection-block .collection-block .main-heading, 
+.exclusive-collection-block .main-collection-block .collection-block .text-info-section, 
+.exclusive-collection-block .main-collection-block .collection-block .subscribe-btn{
+    text-align: center;
+}
+
+.exclusive-collection-block .main-collection-block .collection-block .main-heading{
+    font-family: 'Cormorant', serif;
+    font-size: 48px;
+}
+
+.exclusive-collection-block .main-collection-block .collection-block .text-info-section p{
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 78rem;
+    margin: 2rem auto 0;
+    font-family: 'hk_groteskregular';
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+
+.exclusive-collection-block .main-collection-block .collection-block .button-primary{
+    display: inline-flex;
+    padding: 0.5rem 3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-decoration: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid;
+    font-family: 'hk_groteskregular';
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 3rem
+}
+
+@media (max-width: 767px){
+   .exclusive-collection-block .main-collection-block .collection-block .main-heading{
+     font-size: 30px;
+    line-height: 38px;
+   }
+    .exclusive-collection-block .main-collection-block .collection-block .button-primary{
+        font-size: 14px;
+    }
+}
+
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Collection Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "flower-image",
+      "label": "Stay With Flower Background Image"
+    },
+  ],
+
+  "presets": [
+    {
+      "name": "Collection Section- Text Block"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,73 @@
+<div class="flower-collection-block">
+  <div class="flower-main-collection-block">
+    <div class="collection-section">
+      <h1 class="main-heading-flower">Say it with flowers</h1>
+      <div class="text-info-section-flower">
+        <p class="text-info-flower">
+          Use flowers to commemorate life's important moments and feelings. Tap into the lavish world of flowers to cheer up loved ones, convey warmth and comfort, make an impression or simply boost a mood.
+        </p>
+      </div>
+      <a href="" class="button-primary-flower">What's your mood?</a>
+    </div>
+  </div>
+</div>
+
+{% style %}
+
+.shopify-section .flower-collection-block {
+  background-image: url('{{ section.settings.flower-image | image_url }}');
+  width: 100%;
+  min-height: 64rem;
+}
+
+.shopify-section .flower-collection-block .main-heading-flower{
+    font-family: 'Cormorant, serif';
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 48px;
+    margin-top: 5rem;
+}
+
+.shopify-section .flower-collection-block .collection-section{
+  padding: 5px 45px;
+}
+
+.shopify-section .flower-collection-block .collection-section .text-info-section-flower{
+  margin-bottom: 4rem;
+}
+
+.shopify-section .flower-collection-block .collection-section .text-info-section-flower .text-info-flower{
+    font-family: 'hk_groteskregular';
+    color: #ffffff;
+    font-size: 16px;
+    word-break: break-word;
+    max-width: 450px;
+}
+
+.shopify-section .flower-collection-block .collection-section  .button-primary-flower{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 15px 45px
+}
+
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Stay With Flowers Section",
+  "settings": [
+      {
+          "type": "image_picker",
+          "id": "flower-image",
+          "label": "Background Image"
+      }
+  ],
+  "presets": [
+      {
+          "name": "Stay with Flowers Section"
+      }
+  ]
+}
+{% endschema %}
